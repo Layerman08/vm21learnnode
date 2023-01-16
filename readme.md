@@ -7,3 +7,5 @@
 `git branch -M main` - main to main
 
 `git status` - käsklus, mis hetkel toimub (pole vajalik) 
+
+`npm i` - node modules allalaadimine
