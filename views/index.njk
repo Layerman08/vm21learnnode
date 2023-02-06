@@ -1,9 +1,8 @@
 {% extends 'partials/layout.njk' %}
 {% block content %}
-    <h1>Hello HTML!</h1>
-    {% for num in [0,1,2,3,4,5,6] %}
-
-        <h2>Hello {{ num }}</h2>
-
-    {% endfor %}
+        <form action="/greeting" method="GET">
+            <input type="text" name="name" placeholder="Enter your name here">
+            <input type="number" name="age" placeholder="Enter your age here" max="150">
+            <input type="submit">
+        </form>
 {% endblock %}

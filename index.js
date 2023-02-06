@@ -10,7 +10,16 @@ nunjucks.configure('views', {
 });
 
 app.get('/', (req, res) => {
-  res.render('index.njk');
+  res.render('index.njk', {
+    });
+});
+
+app.get('/greeting', (req, res) => {
+  console.log(req.query.name);
+  res.render('greeting.njk', {
+      name: req.query.name,
+      age: req.query.age
+    });
 });
 
 app.get('/about', (req, res) => {
