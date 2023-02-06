@@ -1,8 +1,17 @@
 {% extends 'partials/layout.njk' %}
 {% block content %}
-        <form action="/greeting" method="GET">
+        <form action="/greeting?value=something" method="POST">
             <input type="text" name="name" placeholder="Enter your name here">
             <input type="number" name="age" placeholder="Enter your age here" max="150">
             <input type="submit">
         </form>
+
+        <ul>
+            {% for num in [1,2,3,4,5,6,7,8,9,10] %}
+            <li>
+                <a href="/page?p={{num}}">
+                {{num}}
+                </a>
+                {% endfor %}
+            </ul>
 {% endblock %}
