@@ -15,7 +15,10 @@
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.body }}</td>
-                <td>actions</td>
+                <td>
+                    <a href="/articles/edit?id={{ article.id }}">Edit</a>
+                    <a href="/articles/delete?id={{ article.id }}">Delete</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
